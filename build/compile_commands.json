@@ -1,0 +1,26 @@
+[
+{
+  "directory": "/home/ybu/mytest/phase0-exercise/build",
+  "command": "/usr/bin/c++  -I/home/ybu/mytest/phase0-exercise/include -isystem /usr/include/eigen3 -std=c++17 -o CMakeFiles/simcore.dir/src/Muscle.cpp.o -c /home/ybu/mytest/phase0-exercise/src/Muscle.cpp",
+  "file": "/home/ybu/mytest/phase0-exercise/src/Muscle.cpp",
+  "output": "CMakeFiles/simcore.dir/src/Muscle.cpp.o"
+},
+{
+  "directory": "/home/ybu/mytest/phase0-exercise/build",
+  "command": "/usr/bin/c++  -I/home/ybu/mytest/phase0-exercise/include -isystem /usr/include/eigen3 -std=c++17 -o CMakeFiles/simcore.dir/src/Character.cpp.o -c /home/ybu/mytest/phase0-exercise/src/Character.cpp",
+  "file": "/home/ybu/mytest/phase0-exercise/src/Character.cpp",
+  "output": "CMakeFiles/simcore.dir/src/Character.cpp.o"
+},
+{
+  "directory": "/home/ybu/mytest/phase0-exercise/build",
+  "command": "/usr/bin/c++  -I/home/ybu/mytest/phase0-exercise/include -isystem /usr/include/eigen3 -std=c++17 -o CMakeFiles/simcore.dir/src/Environment.cpp.o -c /home/ybu/mytest/phase0-exercise/src/Environment.cpp",
+  "file": "/home/ybu/mytest/phase0-exercise/src/Environment.cpp",
+  "output": "CMakeFiles/simcore.dir/src/Environment.cpp.o"
+},
+{
+  "directory": "/home/ybu/mytest/phase0-exercise/build",
+  "command": "/usr/bin/c++  -I/home/ybu/mytest/phase0-exercise/include -isystem /usr/include/eigen3 -std=c++17 -o CMakeFiles/mini_sim.dir/src/main.cpp.o -c /home/ybu/mytest/phase0-exercise/src/main.cpp",
+  "file": "/home/ybu/mytest/phase0-exercise/src/main.cpp",
+  "output": "CMakeFiles/mini_sim.dir/src/main.cpp.o"
+}
+]

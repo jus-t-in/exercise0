@@ -1,0 +1,4 @@
+/home/ybu/mytest/phase0-exercise/build/CMakeFiles/simcore.dir
+/home/ybu/mytest/phase0-exercise/build/CMakeFiles/mini_sim.dir
+/home/ybu/mytest/phase0-exercise/build/CMakeFiles/edit_cache.dir
+/home/ybu/mytest/phase0-exercise/build/CMakeFiles/rebuild_cache.dir

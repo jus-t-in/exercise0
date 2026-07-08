@@ -1,0 +1,40 @@
+#include "Muscle.h"
+#include <algorithm>
+#include <cmath>
+#include <iostream>
+
+namespace MiniSim{
+    Muscle::Muscle(const MuscleInfo& info)
+        : mInfo(info), mActivation(0.0)
+    {
+        std::cout << "[Muscle] Created: " << mInfo.name
+                  << "(Fmax=" << mInfo.max_force << "N)" << std::endl;
+    }
+
+    Muscle::~Muscle()
+    {
+        std::cout << "[Muscle] Destroyed: " << mInfo.name << std::endl;
+    }
+
+    void Muscle::SetActivation(double activation)
+    {
+        // std::clamp 来自 <algorithm>，把值限制在指定范围内。
+        mActivation = std::clamp(activation, 0.0, 1.0);
+    }
+
+    double Muscle::ComputeForce() const
+    {
+        return mInfo.max_force * mActivation;
+    }
+
+    Eigen::VectorXd Muscle::ComputeJointTorque() const
+    {
+        double force = ComputeForce();
+        int num_dof = static_cast<int>(mInfo.moment_arms.size());
+        Eigen::VectorXd torque(num_dof);
+        for(int i = 0; i < num_dof; i++){
+            torque(i) = force * mInfo.moment_arms[i];
+        }
+        return torque;
+    }
+}

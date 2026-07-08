@@ -1,0 +1,2 @@
+/usr/bin/ar qc libsimcore.a CMakeFiles/simcore.dir/src/Muscle.cpp.o CMakeFiles/simcore.dir/src/Character.cpp.o CMakeFiles/simcore.dir/src/Environment.cpp.o
+/usr/bin/ranlib libsimcore.a
