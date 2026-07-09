@@ -30,6 +30,7 @@ namespace MiniSim{
     Eigen::VectorXd Muscle::ComputeJointTorque() const
     {
         double force = ComputeForce();
+        // 一个肌肉拉力可能对多个关节自由度产生力矩，所以用数组
         int num_dof = static_cast<int>(mInfo.moment_arms.size());
         Eigen::VectorXd torque(num_dof);
         for(int i = 0; i < num_dof; i++){
