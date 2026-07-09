@@ -34,6 +34,7 @@ namespace MiniSim{
                       << " but Character has " << mNumDOF << " DOF!" << std::endl;
             return;
         }
+        // 创建一块Muscle，然后把它的地址放到mMuscles这个数组里
         mMuscles.push_back(new Muscle(info));
     }
 
