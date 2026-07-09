@@ -1,0 +1,12 @@
+{
+    // 告诉C/C++扩展的每个.cpp的真实编译参数和include路径
+    "C_Cpp.default.compileCommands": "${workspaceFolder}/build/compile_commands.json",
+    "C_Cpp.default.includePath": [
+        "${workspaceFolder}/include",
+        "/usr/include/eigen3"
+    ],
+
+
+
+
+}
