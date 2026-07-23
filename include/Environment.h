@@ -17,7 +17,7 @@ namespace MiniSim{
         int mMaxSteps;
         double mDt;
         Eigen::VectorXd mTargetPositions;
-        std::map<std::string, double> mRewardMap;
+        std::map<std::string, double> mRewardMap;  // 放不同奖励对应的reward值
 
     public:
         Environment(std::shared_ptr<Character> character, int max_steps = 1000, double dt = 0.01);
