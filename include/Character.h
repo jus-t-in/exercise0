@@ -4,6 +4,8 @@
 在 .vscode/settings.json 中添加：
 {
     "C_Cpp.default.cppStandard": "c++17",
+    "C_Cpp.default.compilerPath": "/usr/bin/g++",
+    "C_Cpp.default.intelliSenseMode": "linux-gcc-x64",
     "files.associations": {
         "*.h": "cpp"
     }
