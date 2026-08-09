@@ -2,6 +2,12 @@
 
 #include <string>
 #include <vector>
+/*
+<Eigen/Dense>报错，就在.vscode/setting.json里加一句：
+    "C_Cpp.default.includePath": [
+        "/usr/include/eigen3"
+    ],
+*/
 #include <Eigen/Dense>
 
 // namespace 用来避免类名和其他库/文件里的名字冲突。
