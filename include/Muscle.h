@@ -1,5 +1,16 @@
 #pragma once
-
+'''
+如果报错，是因为vscode把和.h文件当成C语言头文件，<functional> 是 C++ 标准库头文件。
+在 .vscode/settings.json 中添加：
+{
+    "C_Cpp.default.cppStandard": "c++17",
+    "C_Cpp.default.compilerPath": "/usr/bin/g++",
+    "C_Cpp.default.intelliSenseMode": "linux-gcc-x64",
+    "files.associations": {
+        "*.h": "cpp"
+    }
+}
+'''
 #include <string>
 #include <vector>
 /*
