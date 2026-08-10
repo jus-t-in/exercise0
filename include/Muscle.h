@@ -44,6 +44,7 @@ namespace MiniSim{
         MuscleInfo mInfo;
         double mActivation;
     public:
+        // const引用：不复制，同时保证不会通过 info 修改原对象
         Muscle(const MuscleInfo& info);
         ~Muscle();
 
