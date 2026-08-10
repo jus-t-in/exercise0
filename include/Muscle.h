@@ -51,7 +51,7 @@ namespace MiniSim{
         // activation 会在实现里限制到 [0, 1]，避免调用者传入非法激活值。
         void SetActivation(double activation);
 
-        // 返回 const 引用避免复制字符串；函数后的 const 表示这个函数不会修改对象。
+        // 函数前的 const 表示返回的东西只能读不能改；函数后的 const 表示这个函数不会修改成员变量
         const std::string& GetName() const {return mInfo.name; }
         double GetActivation() const {return mActivation; }
         double GetMaxForce() const {return mInfo.max_force; }
