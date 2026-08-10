@@ -35,6 +35,8 @@ namespace MiniSim{
         int num_dof = static_cast<int>(mInfo.moment_arms.size());
         Eigen::VectorXd torque(num_dof);
         for(int i = 0; i < num_dof; i++){
+            // C++ 的 [] 运算符只能有一个参数，() 可以有多个
+            // Eigen用 () 更灵活            
             torque(i) = force * mInfo.moment_arms[i];
         }
         return torque;
