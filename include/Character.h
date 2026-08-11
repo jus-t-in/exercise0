@@ -18,17 +18,16 @@ namespace MiniSim{
     public:
         Character(int num_dof, const Eigen::VectorXd& mass);
         ~Character();
-
         void AddMuscle(const MuscleInfo& info);
         int GetNumMuscles() const {return static_cast<int>(mMuscles.size());}
-
         // virtual 表示子类以后可以重写这个函数；这里先作为继承语法示例。
         virtual int GetDOF() const {return mNumDOF; }
+        // 这里用'&'，因为Eigen内部是动态分配的堆内存
+        // 拷贝 = 重新 new 一块内存 + 逐个元素复制，DOF 大时很贵
         const Eigen::VectorXd& GetPositions() const {return mPositions; }
         const Eigen::VectorXd& GetVelocities() const {return mVelocities; }
         void SetPositions(const Eigen::VectorXd& pos) { mPositions = pos; }
         void SetVelocities(const Eigen::VectorXd& vel) { mVelocities = vel; }
-
         void SetMuscleActivation(int index, double activation);
         void SetMuscleActivations(const Eigen::VectorXd& activations);
         // 这个function就是个回调写法，不侵入计算逻辑，但允许外部观察（可观察每块肌肉的力）
