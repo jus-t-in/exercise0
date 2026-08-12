@@ -29,6 +29,7 @@ namespace MiniSim{
         void SetPositions(const Eigen::VectorXd& pos) { mPositions = pos; }
         void SetVelocities(const Eigen::VectorXd& vel) { mVelocities = vel; }
         void SetMuscleActivation(int index, double activation);
+        // 为了避免类型转换，没用vector类型
         void SetMuscleActivations(const Eigen::VectorXd& activations);
         // 这个function就是个回调写法，不侵入计算逻辑，但允许外部观察（可观察每块肌肉的力）
         // std::function 可以保存普通函数、lambda、函数对象；默认 nullptr 表示不传回调也能调用。
