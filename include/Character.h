@@ -33,9 +33,9 @@ namespace MiniSim{
         void SetMuscleActivations(const Eigen::VectorXd& activations);
         // 这个function就是个回调写法，不侵入计算逻辑，但允许外部观察（可观察每块肌肉的力）
         // std::function 可以保存普通函数、lambda、函数对象；默认 nullptr 表示不传回调也能调用。
-        Eigen::VectorXd ComputeTotalTorque(
+        Eigen::VectorXd ComputeTotalTorque(  // C++核心思想：函数也是一种值
             std::function<void(const Muscle& muscle, double force)> callback = nullptr
-        ) const;
+        ) const;  // 在 C++ 里，"把一段代码交给另一个函数用"的唯一方式，就是把它当作参数传进去
         void Step(double dt, const Eigen::VectorXd& external_torque);
         void Reset();
     };
