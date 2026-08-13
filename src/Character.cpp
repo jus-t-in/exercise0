@@ -82,6 +82,7 @@ namespace MiniSim{
         Eigen::VectorXd total_torque = muscle_torque + external_torque;
         Eigen::VectorXd acceleration(mNumDOF);
         for (int i = 0; i < mNumDOF; i++){
+            // 角加速度T = I·α，I近似成mass
             acceleration(i) = total_torque(i) / mMass(i);
         }
         // 半隐式欧拉：先用加速度更新速度，再用新速度更新位置。
