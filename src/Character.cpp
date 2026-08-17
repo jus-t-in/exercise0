@@ -97,6 +97,7 @@ namespace MiniSim{
         mVelocities = Eigen::VectorXd::Zero(mNumDOF);
         mPositions = Eigen::VectorXd::Zero(mNumDOF);
         for(auto& muscle : mMuscles){
+            // muscle是指针，所以用'->'是(*指针).的简写
             muscle->SetActivation(0.0);
         }
     }
