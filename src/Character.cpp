@@ -74,6 +74,7 @@ namespace MiniSim{
 
     void Character::Step(double dt, const Eigen::VectorXd& external_torque)
     {
+        // 比较操作允许混合类型，所以这里不用转int
         if (external_torque.size() != mNumDOF){
             throw std::invalid_argument("external_torque size must match num_dof");
         }
