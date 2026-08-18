@@ -28,10 +28,11 @@ namespace MiniSim{
         std::string name;
         double max_force;
         std::vector<double> moment_arms;
-
         // const T& 传参：不复制对象（string/vector 可能很大），同时保证不修改原对象。
         // 冒号后是成员初始化列表，直接构造成员，比先默认构造再赋值更高效。
         MuscleInfo(const std::string& name, double max_force,
+        // 小且复制成本低的类型（如 double）按值传递，大或复制成本高的类型按 const& 传递；
+        // double 仅 8 字节，按值复制（一条 mov 指令）比按引用间接访问更快或相当。
                    const std::vector<double>& moment_arms)
             : name(name), max_force(max_force), moment_arms(moment_arms) {}
     };
