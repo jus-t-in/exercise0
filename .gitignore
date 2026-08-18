@@ -1,0 +1,21 @@
+# 编译产物
+/build/
+*.o
+*.a
+*.so
+*.exe
+
+# Vim 交换文件
+*.swp
+*.swo
+*~
+
+# IDE / 编辑器
+.vscode/
+.idea/
+
+# CMake 临时
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+compile_commands.json
