@@ -66,6 +66,7 @@ namespace MiniSim{
     }
 
     Eigen::VectorXd Character::ComputeTotalTorque(
+        // 默认参数只在“声明”里写一次，实现里再写就会报错
         std::function<void(const Muscle& muscle, double force)> callback
     ) const
     {
